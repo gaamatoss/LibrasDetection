@@ -1,0 +1,30 @@
+@font-face{
+    font-family: Libras;
+    src: url(../../lib/fonts/Libras2020-Regular.ttf);
+}
+h1{
+    text-align: center;
+}
+
+.body {
+    display: flex;
+    flex-direction: row;
+      align-items: center;
+      margin-top: 0;
+      width: 70% ;
+}
+.gif {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.guide {
+    width: 500px;
+    height: 750px;
+}
+
+.giphy {
+    width: 700px;
+    height: 400px;
+    margin: 50px;
+}
