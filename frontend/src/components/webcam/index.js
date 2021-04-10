@@ -97,9 +97,9 @@ function Detection() {
           ref={webcamRef}
           style={{
             position: "absolute",
-            marginLeft: "auto",
+            marginLeft: 100,
             marginRight: "auto",
-            marginTop: 20,
+            marginTop: 40,
             left: 0,
             right: 0,
             textAlign: "center",
@@ -107,6 +107,7 @@ function Detection() {
             width: 640,
             height: 480,
             audio: false,
+            borderRadius: 10
           }}
         />
 
@@ -114,9 +115,9 @@ function Detection() {
           ref={canvasRef}
           style={{
             position: "absolute",
-            marginLeft: "auto",
+            marginLeft: 100,
             marginRight: "auto",
-            marginTop: 20,
+            marginTop: 40,
             left: 0,
             right: 0,
             textAlign: "center",
@@ -133,10 +134,10 @@ function Detection() {
               marginLeft: "auto",
               marginRight: "auto",
               left: 800,
-              bottom: 350,
+              bottom: 220,
               right: 0,
               textAlign: "center",
-              height: 100,
+              height: 300,
             }}
           />
         ) : (
