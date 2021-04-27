@@ -28,8 +28,8 @@ const Routes = () => {
     return (
       <BrowserRouter>
         <Switch>
-          <Route path="/alfabeto" exact component={alfabeto} />
-          <Route path="/gestos" exact component={gestos} />
+          <PrivateRoute path="/alfabeto" exact component={alfabeto} />
+          <PrivateRoute path="/gestos" exact component={gestos} />
           <Route path="/" exact component={login} />
           <Route path="/cadastro" exact component={cadastro} />
         </Switch>
