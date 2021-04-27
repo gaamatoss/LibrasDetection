@@ -17,15 +17,13 @@ const Cadastro = (props) =>{
     }
     return (
       <div className="body">
-        <div className="welcome">
-          <h3>Bem-Vindo</h3>
-        </div>
         <div className="form">
           <Form
             onChange={(e) => {
               getForm(e);
             }}
-          >
+            >
+            <h2>Bem-Vindo</h2>
             <h3>Cadastrar</h3>
             <FormGroup>
               <ControlLabel>Name</ControlLabel>

@@ -1,13 +1,12 @@
-// Points for fingers
+// Juntas dos dedos
 const fingerJoints = {
-    thumb: [0, 1, 2, 3, 4],
-    indexFinger: [0, 5, 6, 7, 8],
-    middleFinger: [0, 9, 10, 11, 12],
-    ringFinger: [0, 13, 14, 15, 16],
-    pinky: [0, 17, 18, 19, 20],
+    thumb: [0, 1, 2, 3, 4], //dedão
+    indexFinger: [0, 5, 6, 7, 8], //indicador
+    middleFinger: [0, 9, 10, 11, 12], //dedo do meio
+    ringFinger: [0, 13, 14, 15, 16], //anelar
+    pinky: [0, 17, 18, 19, 20], //mindinho
   };
   
-  // Infinity Gauntlet Style
   const style = {
     0: { color: "red", size: 5 },
     1: { color: "red", size: 5 },
@@ -32,25 +31,21 @@ const fingerJoints = {
     20: { color: "red", size: 5 },
   };
   
-  // Drawing function
+  // Função para realizar o desenho
   export const drawHand = (predictions, ctx) => {
-    // Check if we have predictions
     if (predictions.length > 0) {
-      // Loop through each prediction
+      // Loop para cada previsão
       predictions.forEach((prediction) => {
-        // Grab landmarks
         const landmarks = prediction.landmarks;
-  
-        // Loop through fingers
+        // Loop nos dedos
         for (let j = 0; j < Object.keys(fingerJoints).length; j++) {
           let finger = Object.keys(fingerJoints)[j];
-          //  Loop through pairs of joints
+          //  Loop em cada par de dedo
           for (let k = 0; k < fingerJoints[finger].length - 1; k++) {
-            // Get pairs of joints
             const firstJointIndex = fingerJoints[finger][k];
             const secondJointIndex = fingerJoints[finger][k + 1];
   
-            // Draw path
+            // Desenha o caminho entre cada junta
             ctx.beginPath();
             ctx.moveTo(
               landmarks[firstJointIndex][0],

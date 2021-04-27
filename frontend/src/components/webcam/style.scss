@@ -1,7 +1,23 @@
 .camera {
     margin-left: 100px;
 }
-img {
-    vertical-align: top;
-    margin-top: 80px;
-}
+
+@media only screen and (max-width: 1350px) {
+    .body-header {
+        display: flex;
+        flex-direction: column;
+    }
+    img {
+        display: flex;
+    }
+} 
+
+@media only screen and (max-width: 400px) {
+    .body-header {
+        display: flex;
+        flex-direction: column;
+    }
+     img {
+        display: flex;
+    }
+} 

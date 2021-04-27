@@ -20,7 +20,7 @@ const Alfa = () =>{
         <div className="gif">
             <h2>Como Utilizar</h2>
             <img className="giphy" alt="gif" src={gif} />
-            <Button appearance="primary" size="lg" onClick={navigateTo}>Detectar</Button>
+            <Button appearance="primary" size="lg" className="detect-button" onClick={navigateTo}>Detectar</Button>
         </div>
       </div>
     );

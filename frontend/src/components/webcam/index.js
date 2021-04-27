@@ -3,16 +3,23 @@ import * as tf from "@tensorflow/tfjs";
 import * as handpose from "@tensorflow-models/handpose";
 import Webcam from "react-webcam";
 import "./style.scss";
-import { drawHand } from "./utilities";
+import { drawHand } from "./drawing";
 import * as fp from "fingerpose";
-import thumbs_up from "./images/thumbs_up.png";
-import victory from "./images/victory.png";
-import letraL from "./images/letraL.png";
-import letraM from "./images/letraM.png";
+import letraB from "./images/letraL.png";
 import letraC from "./images/letraC.png";
-import letraMGesture from "./gestures/letraM";
+import letraF from "./images/letraM.png";
+import letraG from "./images/letraM.png";
+import letraI from "./images/letraM.png";
+import letraL from "./images/letraM.png";
+import letraM from "./images/letraM.png";
+import letraV from "./images/letraV.png";
+import letraBGesture from "./gestures/letraB";
 import letraCGesture from "./gestures/letraC";
+import letraFGesture from "./gestures/letraF";
+import letraGGesture from "./gestures/letraG";
+import letraIGesture from "./gestures/letraI";
 import letraLGesture from "./gestures/letraL";
+import letraMGesture from "./gestures/letraM";
 
 
 function Detection() {
@@ -20,7 +27,7 @@ function Detection() {
   const canvasRef = useRef(null);
  
   const [emoji, setEmoji] = useState(null);
-  const images = { thumbs_up: thumbs_up, victory: victory, letraL: letraL, letraM: letraM, letraC: letraC };
+  const images = { Victory: letraV, letraL: letraL, letraM: letraM, letraC: letraC, letraB: letraB, letraF: letraF, letraG: letraG, letraI: letraI };
 
 
   const runHandpose = async () => {
@@ -58,11 +65,14 @@ function Detection() {
 
       if (hand.length > 0) {
         const GE = new fp.GestureEstimator([
-            fp.Gestures.ThumbsUpGesture,
             fp.Gestures.VictoryGesture,
+            letraBGesture,
+            letraCGesture,
+            letraFGesture,
+            letraGGesture,
+            letraIGesture,
             letraLGesture,
             letraMGesture,
-            letraCGesture,
         ]);
 
         const gesture = await GE.estimate(hand[0].landmarks, 4);
@@ -99,7 +109,7 @@ function Detection() {
             position: "absolute",
             marginLeft: 100,
             marginRight: "auto",
-            marginTop: 40,
+            marginTop: 70,
             left: 0,
             right: 0,
             textAlign: "center",
@@ -117,7 +127,7 @@ function Detection() {
             position: "absolute",
             marginLeft: 100,
             marginRight: "auto",
-            marginTop: 40,
+            marginTop: 70,
             left: 0,
             right: 0,
             textAlign: "center",

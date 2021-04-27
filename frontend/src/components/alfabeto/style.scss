@@ -1,16 +1,8 @@
-@font-face{
-    font-family: Libras;
-    src: url(../../lib/fonts/Libras2020-Regular.ttf);
-}
-h1{
-    text-align: center;
-}
-
 .body {
     display: flex;
     flex-direction: row;
       align-items: center;
-      margin-top: 0;
+      margin-top: 100px;
       width: 70% ;
 }
 .gif {
@@ -28,3 +20,49 @@ h1{
     height: 400px;
     margin: 50px;
 }
+
+@media only screen and (max-width: 1350px) {
+    .body {
+        display: flex;
+        flex-direction: column;
+    }
+    .guide {
+    width: 50em;
+    height: 70em;
+    margin-bottom: 10em;
+    }
+
+    .giphy {
+        width: 60em;
+        height: 40em;
+        margin: 20px;
+    }
+    .detect-button {
+        width: 10em;
+        height: 5em;
+        margin-bottom: 10em;
+    }
+} 
+
+@media only screen and (max-width: 400px) {
+    .body {
+        display: flex;
+        flex-direction: column;
+    }
+    .guide {
+    width: 30em;
+    height: 40em;
+    margin-bottom: 4em;
+    }
+
+    .giphy {
+        width: 30em;
+        height: 20em;
+        margin: 10px;
+    }
+    .detect-button {
+        width: 5em;
+        height: 2em;
+        margin-bottom: 5em;
+    }
+} 
