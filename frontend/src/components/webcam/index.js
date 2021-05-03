@@ -5,14 +5,16 @@ import Webcam from "react-webcam";
 import "./style.scss";
 import { drawHand } from "./drawing";
 import * as fp from "fingerpose";
-import letraB from "./images/letraL.png";
+//importando imagens
+import letraB from "./images/letraB.png";
 import letraC from "./images/letraC.png";
-import letraF from "./images/letraM.png";
-import letraG from "./images/letraM.png";
-import letraI from "./images/letraM.png";
-import letraL from "./images/letraM.png";
+import letraF from "./images/letraF.png";
+import letraG from "./images/letraG.png";
+import letraI from "./images/letraI.png";
+import letraL from "./images/letraL.png";
 import letraM from "./images/letraM.png";
-import letraV from "./images/letraV.png";
+import victory from "./images/letraV.png";
+//importando gestos
 import letraBGesture from "./gestures/letraB";
 import letraCGesture from "./gestures/letraC";
 import letraFGesture from "./gestures/letraF";
@@ -27,7 +29,7 @@ function Detection() {
   const canvasRef = useRef(null);
  
   const [emoji, setEmoji] = useState(null);
-  const images = { Victory: letraV, letraL: letraL, letraM: letraM, letraC: letraC, letraB: letraB, letraF: letraF, letraG: letraG, letraI: letraI };
+  const images = { victory: victory, letraL: letraL, letraM: letraM, letraC: letraC, letraB: letraB, letraF: letraF, letraG: letraG, letraI: letraI };
 
 
   const runHandpose = async () => {

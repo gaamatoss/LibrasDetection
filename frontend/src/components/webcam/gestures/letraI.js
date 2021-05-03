@@ -35,10 +35,10 @@ letraIGesture.addDirection(fp.Finger.Pinky, fp.FingerDirection.DiagonalUpLeft, 0
 letraIGesture.addDirection(fp.Finger.Pinky, fp.FingerDirection.DiagonalUpRight, 0.5);
 
 // aumentar peso nos dedos 
-letraIGesture.setWeight(fp.Finger.Thumb, 1);
-letraIGesture.setWeight(fp.Finger.Index, 1);
-letraIGesture.setWeight(fp.Finger.Middle, 1);
-letraIGesture.setWeight(fp.Finger.Ring, 1);
-letraIGesture.setWeight(fp.Finger.Pinky, 1);
+letraIGesture.setWeight(fp.Finger.Thumb, 0.5);
+letraIGesture.setWeight(fp.Finger.Index, 0.5);
+letraIGesture.setWeight(fp.Finger.Middle, 0.5);
+letraIGesture.setWeight(fp.Finger.Ring, 0.5);
+letraIGesture.setWeight(fp.Finger.Pinky, 2);
 
 export default letraIGesture;
