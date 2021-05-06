@@ -2,7 +2,7 @@ import React from 'react';
 import 'rsuite/dist/styles/rsuite-default.css';
 import {  Button } from 'rsuite';
 import { useHistory } from 'react-router-dom';
-import guide from './guide.png'
+import guide from './guide.jpg'
 import gif from  './gif.gif'; 
 import './style.scss';
 

@@ -42,26 +42,26 @@ function Detection() {
   };
 
   const detect = async (net) => {
-    // Check data is available
+    // verificar se possui dado
     if (
       typeof webcamRef.current !== "undefined" &&
       webcamRef.current !== null &&
       webcamRef.current.video.readyState === 4
     ) {
-      // Get Video Properties
+      // propriedades de video
       const video = webcamRef.current.video;
       const videoWidth = webcamRef.current.video.videoWidth;
       const videoHeight = webcamRef.current.video.videoHeight;
 
-      // Set video width
+      // altura e largura do video
       webcamRef.current.video.width = videoWidth;
       webcamRef.current.video.height = videoHeight;
 
-      // Set canvas height and width
+      // altura e largura do canvas
       canvasRef.current.width = videoWidth;
       canvasRef.current.height = videoHeight;
 
-      // Make Detections
+      // faz a estimativa da detecção
       const hand = await net.estimateHands(video);
       // console.log(hand);
 
@@ -92,7 +92,7 @@ function Detection() {
           // console.log(emoji);
         }
       }
-      // Draw mesh
+      // Desenho da mão
       const ctx = canvasRef.current.getContext("2d");
       drawHand(hand, ctx);
     }
